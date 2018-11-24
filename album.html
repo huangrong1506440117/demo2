@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keyword" content="css3，旋转相册，棋魂">
+    <meta name="description" content="">
+    <title>css3旋转相册</title>
+    <style>
+        body{
+            overflow: hidden;
+            margin: 0;
+            background: #c3ccd4;
+            }
+        .wrap{
+            /*相对定位，限制绝对定位*/
+            position: relative;
+            width: 300px;
+            height: 200px;
+            margin: 220px auto;
+        }
+        .wrap img{ 
+            box-sizing: border-box;/*盒模型*/
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 5px solid #fff;
+            transition: 0.8s;
+        }
+        .wrap:hover img:nth-child(1){
+            transform: translate(-100%,-40%) scale(0.8) rotate(-20deg);
+        }
+        .wrap:hover img:nth-child(2){
+            transform: translate(-20%,-85%) scale(0.8) rotate(-20deg);
+        }
+        .wrap:hover img:nth-child(3){
+            transform: translate(60%,-128%) scale(0.8) rotate(-20deg);
+        }
+        .wrap:hover img:nth-child(4){
+            transform: translate(-80%,45%) scale(0.8) rotate(-20deg);
+        }
+        .wrap:hover img:nth-child(5){
+            transform: translate(80%,-45%) scale(0.8) rotate(-20deg);
+        }
+        .wrap:hover img:nth-child(6){
+            transform: translate(-60%,130%) scale(0.8) rotate(-20deg);
+        }
+        .wrap:hover img:nth-child(7){
+            transform: translate(20%,85%) scale(0.8) rotate(-20deg);
+        }
+        .wrap:hover img:nth-child(8){
+            transform: translate(100%,40%) scale(0.8) rotate(-20deg);
+        }
+        .wrap:hover img:nth-child(9){
+            /*将鼠标放在wrap上，让img9执行*/
+            /*transform:css3变换属性
+              rotate：旋转 deg角度
+              scale:缩放
+              :translate(x,y):位移*/
+            transform:scale(1.2) rotate(-20deg);
+    }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <img src="images/1.jpeg">
+        <img src="images/2.jpeg">
+        <img src="images/3.jpg">
+        <img src="images/4.jpeg">
+        <img src="images/5.jpg">
+        <img src="images/6.jpg">
+        <img src="images/7.jpg">
+        <img src="images/8.jpeg">
+        <img src="images/9.jpeg">
+    </div>
+</body>
+</html>
